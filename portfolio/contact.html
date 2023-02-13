@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh Maheshwari - Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/intro.html">My Intro</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="contactform">
+                <h1>Contact me for work/general Enquiries</h1>
+                <form>
+                    <div class="mb-3">
+                      <label for="clientemail" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="clientphone" class="form-label">Phone</label>
+                      <input type="phone" class="form-control" id="clientphone">
+                    </div>
+                   
+                </form>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const email = document.querySelector('#clientemail');
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click',()=>{
+        if(email.value==""){
+            alert('Please fill entries!');
+        }else{
+            btn.innerHTML=`<a href="/thank.html">Submit</a>`
+        }
+    })
+</script>
+</html>
